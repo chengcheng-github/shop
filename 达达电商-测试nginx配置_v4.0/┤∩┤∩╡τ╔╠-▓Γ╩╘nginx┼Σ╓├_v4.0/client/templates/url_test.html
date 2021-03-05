@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script src="../static/js/jquery-3.1.1.min.js"></script>
+<script>
+(function ($) {
+      $.getUrlParam = function (name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return r;
+        return null;
+      }
+
+     var skuid = $.getUrlParam('skuid')[2]
+</script>
+</html>
